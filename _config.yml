@@ -1,0 +1,53 @@
+# Where things are
+sass:
+  style: :compressed
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+
+# Handling Reading
+exclude:
+  - .jekyll-cache
+strict_front_matter: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+# Outputting
+permalink     : pretty
+paginate_path : /page:num
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Others
+title: YOUR_NAME | Technical blog
+description: YOUR_NAME's technical blog
